@@ -14,7 +14,7 @@ let name = "Junhao Zhang";
 let github = "https://github.com/cursorweb";
 let website = "https://www.mr-lapiz.cf";
 
-var data = require("./data.js") || {
+const data = require("./data.js") || {
   instagram: instagram,
   "repl-it": replit,
   discord: discord,
