@@ -17,3 +17,4 @@ TYPE* -> "[A template or customizable project? Seldom put]"
 ```
 
 Have fun with my code! Everything is licensed under the MIT license.
+[Instagram](https://www.instagram.com/jerrylapiz/) [Discord Server](https://discord.gg/pSsnafT)
