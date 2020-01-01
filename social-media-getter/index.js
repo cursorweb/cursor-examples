@@ -1,5 +1,7 @@
 /**
  * Who doesn't wanna get all my SM?
+ * Instagram: https://www.instagram.com/jerrylapiz/
+ * Discord: https://discord.gg/pSsnafT
  */
 
 /**Following code is not recommended to be changed.**/
@@ -23,6 +25,7 @@ const data = require("./data.js") || {
   github: github,
   website: website
 };
+
 
 /**OFF LIMITS FROM HERE**/
 
@@ -58,6 +61,18 @@ for(i in data){
   });
 }
 
+app.get("/sm", (req, res) => {
+  //Get all the data and put it in an array
+  let array = Object.keys(data).map(key => {
+    return {
+      [key]: data[key]
+    };
+  });
+  res.type(".json");
+  // Always have to stringify the array or you get [object Object], [object Object], ...
+  res.send(`{"ok":true,ans:${JSON.stringify(array)}}`);
+});
+
 app.use((req, res, next)=>{
   // In case user has accessed something not found, we can guide them
   res.type(".json");
@@ -66,3 +81,5 @@ app.use((req, res, next)=>{
 
 // And finally, let's get the server up!
 app.listen(8080);
+
+/* Made by Junhao Zhang */
